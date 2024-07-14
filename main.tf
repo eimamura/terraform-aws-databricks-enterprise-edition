@@ -14,7 +14,7 @@ terraform {
 }
 
 provider "aws" {
-  region = var.aws_region
+  region = var.region
 }
 
 // initialize provider in "MWS" mode for account-level resources
@@ -22,8 +22,8 @@ provider "databricks" {
   alias         = "mws"
   host          = "https://accounts.cloud.databricks.com"
   account_id    = var.databricks_account_id
-  client_id     = var.databricks_client_id
-  client_secret = var.databricks_client_secret
+  client_id     = var.client_id
+  client_secret = var.client_secret
 }
 
 # module "e2" {
